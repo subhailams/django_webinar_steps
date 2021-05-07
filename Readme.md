@@ -209,7 +209,7 @@ Add csrf token and form.text in forms.py
 					</form>
 ```
 
-## 3. Update operation Database 
+## 4. Update operation Database 
 
 Add below in "django_todo/todo/views.py"
 
@@ -256,7 +256,7 @@ Update below in index.html
 							<a href="{% url 'complete' todo.id %}"><li class="list-group-item">{{ todo.text }}</li></a>
 
 ```
-## 4. Delete operation in Database 
+## 5. Delete operation in Database 
 
 Add delete completed todo function in views.py
 
