@@ -52,10 +52,9 @@ python manage.py runserver
 ```
 
 
-Clone the starter files (contains starter front end files)
-```
-git clone https://github.com/subhailams/django_todo_app_starter.git
-```
+Download  the starter files (contains starter front end files)
+
+https://github.com/subhailams/django_todo_app_starter
 
 Copy "static" and "templates" folders django_todo_app_starter from to our "django_todo/todo" app
 
