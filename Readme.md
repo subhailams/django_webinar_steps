@@ -242,3 +242,43 @@ Update below in index.html
 							<a href="{% url 'complete' todo.id %}"><li class="list-group-item">{{ todo.text }}</li></a>
 
 ```
+
+Add delete completed todo function in views.py
+
+```
+def deleteCompleted(request):
+    Todo.objects.filter(complete__exact=True).delete()
+
+    return redirect('index')
+```
+
+Add urls for delete complete
+```
+    path('deletecomplete', views.deleteCompleted, name='deletecomplete'),
+
+```
+Update index.html with below
+```
+		<a href="{% url 'deletecomplete' %}"><button type="button" class="btn btn-warning"> <i class="glyphicon glyphicon-trash"></i> DELETE COMPLETED</button></a>
+```
+
+
+Add delete all function in views.py
+
+```
+
+def deleteAll(request):
+    Todo.objects.all().delete()
+
+    return redirect('index')
+```
+
+Add urls for delete complete
+```
+    path('deleteall', views.deleteAll, name='deleteall')
+
+```
+Update index.html with below
+```
+		<a href="{% url 'deleteall' %}"><button type="button" class="btn btn-warning"> <i class="glyphicon glyphicon-trash"></i> DELETE ALL </button></a>
+```
