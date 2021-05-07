@@ -233,6 +233,7 @@ Update below in index.html
 ```
 					<form action="{% url 'add' %}" method="POST" role="form">
 ```
+Reload http://127.0.0.1:8000/ and check if above add function work
 
 Add complete todo view in views.py
 
