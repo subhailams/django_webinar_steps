@@ -136,7 +136,7 @@ python manage.py migrate
 
 Goto admin http://127.0.0.1:8000/admin/ and add dummy todo list in database
 
-## 2. Add Views
+## 2. Read Opeartion Database
 
 Add below in "django_todo/todo/views.py"
 ```
