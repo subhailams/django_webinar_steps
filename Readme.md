@@ -87,5 +87,44 @@ urlpatterns = [
     path('', views.index, name='index'),
 ]
 ```
+Run server 
 
+Add {% load static %} in todo/templates/todo/index.html
+
+```
+{% load static %}
+```
+Update below lines in "django_todo/todo/templates/todo/index.html"
+
+```
+<link rel="stylesheet" href="{% static 'todo/bs/css/flatly.min.css' %}" />
+<link rel="stylesheet" href="{% static 'todo/styles.css' %}" />
+```
+
+```
+<link rel="stylesheet" href="{% static 'todo/bs/css/flatly.min.css' %}" />
+<link rel="stylesheet" href="{% static 'todo/styles.css' %}" />
+```
+Create your models in "django_todo/todo/models.py"
+
+```
+class Todo(models.Model):
+    text = models.CharField(max_length=40)
+    complete = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.text
+```
+
+Register your models "django_todo/todo/admin.py"
+```
+from .models import Todo
+admin.site.register(Todo)
+```
+
+Migrate your models using command below
+```
+python manage.py makemigrations
+python manage.py migrate
+```
 
