@@ -35,6 +35,11 @@ Step 4 : Update todo application
 
 Add "todo" in INSTALLED_APPS in settings.py
 ```
+INSTALLED_APPS = [
+    'todo',
+```
+
+```
 python manage.py migrate
 ```
 
