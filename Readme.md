@@ -106,10 +106,10 @@ Update below lines in "django_todo/todo/templates/todo/index.html"
 <link rel="stylesheet" href="{% static 'todo/styles.css' %}" />
 ```
 
-```
-<link rel="stylesheet" href="{% static 'todo/bs/css/flatly.min.css' %}" />
-<link rel="stylesheet" href="{% static 'todo/styles.css' %}" />
-```
+Reload the page http://127.0.0.1:8000/
+
+## 1. Create operation Database
+
 Create your models in "django_todo/todo/models.py"
 
 ```
@@ -133,7 +133,10 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+
 Goto admin http://127.0.0.1:8000/admin/ and add dummy todo list in database
+
+## 2. Add Views
 
 Add below in "django_todo/todo/views.py"
 ```
@@ -159,6 +162,9 @@ Update index.html with for loop
 						{% endfor %}
 
 ```
+Reload the page http://127.0.0.1:8000/
+
+## 3. Add Forms
 
 Create "django_todo/todo/forms.py" for TodoForm
 ```
@@ -202,6 +208,9 @@ Add csrf token and form.text in forms.py
 						</div>
 					</form>
 ```
+
+## 3. Update operation Database 
+
 Add below in "django_todo/todo/views.py"
 
 ```
@@ -247,6 +256,7 @@ Update below in index.html
 							<a href="{% url 'complete' todo.id %}"><li class="list-group-item">{{ todo.text }}</li></a>
 
 ```
+## 4. Delete operation in Database 
 
 Add delete completed todo function in views.py
 
