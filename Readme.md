@@ -296,3 +296,5 @@ Update index.html with below
 ```
 		<a href="{% url 'deleteall' %}"><button type="button" class="btn btn-warning"> <i class="glyphicon glyphicon-trash"></i> DELETE ALL </button></a>
 ```
+
+Check the complete project here! https://github.com/subhailams/django_todo
